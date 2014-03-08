@@ -1,0 +1,14 @@
+{
+    "require": {
+        "symfony/http-foundation": "@stable",
+        "symfony/routing": "@stable",
+        "symfony/http-kernel": "@stable",
+        "symfony/event-dispatcher": "@stable",
+        "twig/twig": "@stable"
+    },
+    "autoload": {
+        "psr-0": {
+            "QafooLabs\\": "src/"
+        }
+    }
+}
