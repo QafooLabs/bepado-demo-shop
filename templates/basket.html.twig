@@ -1,0 +1,134 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<h1>Basket ({{ basket.count}} Items)</h1>
+
+<form method="POST" action="/{{ shop }}/checkout" role="form">
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Shipment</th>
+            <th>Items</th>
+            <th>Price</th>
+            <th>Shipping Costs</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for shipment in basket.shipments %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>
+            <ul>
+                {% for item in shipment.items %}
+                <li>{{ item.product.title }} <input type="number" name="items[{{ item.product.id }}]" value="{{ item.count }}" />
+                {% endfor %}
+            </ul>
+        </td>
+        {% if shipment.isShippable %}
+        <td>
+            {{ shipment.grossPrice|number_format(2, ',', '') }} ({{ shipment.netPrice|number_format(2, ',', '') }})
+        </td>
+        <td>
+            {{ shipment.grossShippingCosts|number_format(2, ',', '') }} ({{ shipment.netShippingCosts|number_format(2, ',', '') }})
+        </td>
+        {% else %}
+            <td colspan="2">This shipment is not shippable to your country.</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Sum</td>
+            <td>
+                {{ basket.totalGrossPrice|number_format(2, ',', '') }} ({{ basket.totalNetPrice|number_format(2, ',', '') }})
+            </td>
+            <td>
+                {{ basket.totalGrossShippingCosts|number_format(2, ',', '') }} ({{ basket.totalNetShippingCosts|number_format(2, ',', '') }})
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Total</td>
+            <td colspan="2">
+                <strong>{{ (basket.totalGrossPrice+basket.totalGrossShippingCosts)|number_format(2, ',', '') }}</strong>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="form-group">
+    <label for="email">E-Mail</label>
+
+    <input id="email" name="address[email]" class="form-control" required="required" />
+</div>
+
+<div class="form-group">
+    <label for="phone">Phone</label>
+
+    <input id="phone" name="address[phone]" class="form-control" required="required" />
+</div>
+
+<div class="form-group">
+    <label for="firstName">Name</label>
+    <div class="row">
+        <div class="col-xs-4">
+            <input id="firstName" type="text" class="form-control" placeholder="Firstname" name="address[firstName]" required="required" />
+        </div>
+
+        <div class="col-xs-4">
+            <input type="text" class="form-control" placeholder="Middlename" name="address[middleName]" required="required" />
+        </div>
+
+        <div class="col-xs-4">
+            <input type="text" class="form-control" placeholder="Surname" name="address[surName]" required="required" />
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="company">Company</label>
+    <input id="company" type="address[company]" value="Sample Company" class="form-control" required="required" />
+</div>
+
+<div class="form-group">
+    <label for="street">Street</label>
+    <div class="row">
+        <div class="col-xs-8">
+            <input id="street" type="text" class="form-control" placeholder="Street" name="address[street]" required="required" />
+        </div>
+
+        <div class="col-xs-4">
+            <input id="streetNumber" type="text" class="form-control" placeholder="Number" name="address[streetNumber]" required="required" />
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="zipCode">ZipCode</label>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <input id="zipCode" type="text" class="form-control" placeholder="ZipCode" name="address[zip]" required="required" />
+        </div>
+
+        <div class="col-xs-6">
+            <input type="text" class="form-control" placeholder="City" name="address[city]" required="required" />
+        </div>
+
+        <div class="col-xs-4">
+            <select class="form-control" id="country" name="address[country]">
+                <option value="DEU">Germany</option>
+                <option value="AUT">Austria</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<p align="center">
+    <input type="submit" class="btn btn-primary" value="Checkout" />
+</p>
+
+</form>
+
+{% endblock %}

@@ -4,7 +4,10 @@
         "symfony/routing": "@stable",
         "symfony/http-kernel": "@stable",
         "symfony/event-dispatcher": "@stable",
-        "twig/twig": "@stable"
+        "symfony/console": "@stable",
+        "twig/twig": "@stable",
+        "doctrine/dbal": "@stable",
+        "bepado/sdk": "@stable"
     },
     "autoload": {
         "psr-0": {

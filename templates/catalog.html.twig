@@ -1,0 +1,35 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<h1>Categories</h1>
+<ul>
+{% for category,count in categories %}
+    <li><a href="/{{ shop }}?category={{ category }}">{{ category }} ({{ count }})</a></li>
+{% endfor %}
+</ul>
+
+<h1>Products</h1>
+
+{% for product in products %}
+    <div class="row" style="margin-bottom: 10px;">
+        <div class="col-xs-2">
+            {% if product.images|length > 0 %}
+                <img src="{{ product.images[0] }}" width="160" height="160" />
+            {% else %}
+                <img src="http://placehold.it/160x160" />
+            {% endif %}
+        </div>
+        <div class="col-xs-6">
+            <h4>{{ product.title }}</h4>
+            <p>{{ product.shortDescription }}</p>
+        </div>
+        <div class="col-xs-4">
+            <h4>{{ product.formattedGrossPrice }}</h4>
+            <form method="POST" action="/{{ shop }}/basket-add">
+                <input type="hidden" name="id" value="{{ product.id }}" />
+                <input class="btn btn-primary" type="submit" value="Buy" />
+            </form>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}

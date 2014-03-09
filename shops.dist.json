@@ -1,0 +1,19 @@
+{
+    "dummy": {
+        "host": "http://example.com"
+    },
+    "mysql": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "",
+    },
+    "bepado": {
+        "host": "bepado.local"
+    },
+    "shops": {
+        "example": {
+            "apiKey": "abcdefg"
+        }
+    }
+}

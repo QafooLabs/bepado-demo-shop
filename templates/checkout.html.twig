@@ -1,0 +1,7 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<h1>Checkout Completed</h1>
+
+<p>{{ order.address.firstName }} ordered {{ order.shipments|length }} shipments.</p>
+{% endblock %}
