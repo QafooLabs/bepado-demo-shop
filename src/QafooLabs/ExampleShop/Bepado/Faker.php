@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\DummyShop\Bepado;
+namespace QafooLabs\ExampleShop\Bepado;
 
 use Bepado\SDK\Rpc;
 use Bepado\SDK\Struct\RpcCall;

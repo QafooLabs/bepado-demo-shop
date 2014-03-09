@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\DummyShop\Controller;
+namespace QafooLabs\ExampleShop\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\FlattenException;

@@ -1,21 +1,21 @@
 <?php
 
-namespace QafooLabs\DummyShop\Bepado;
+namespace QafooLabs\ExampleShop\Bepado;
 
-use QafooLabs\DummyShop\Model\ProductConverter;
-use QafooLabs\DummyShop\Model\ShopProductGateway;
+use QafooLabs\ExampleShop\Model\ProductConverter;
+use QafooLabs\ExampleShop\Model\ShopProductGateway;
 use Bepado\SDK\ProductFromShop;
 use Bepado\SDK\Struct;
 
 class SimpleProductFromShop implements ProductFromShop
 {
     /**
-     * @var \QafooLabs\DummyShop\Bepado\Model\ProductConverter
+     * @var \QafooLabs\ExampleShop\Bepado\Model\ProductConverter
      */
     private $converter;
 
     /**
-     * @var \QafooLabs\DummyShop\Bepado\Model\ShopProductGateway
+     * @var \QafooLabs\ExampleShop\Bepado\Model\ShopProductGateway
      */
     private $gateway;
 

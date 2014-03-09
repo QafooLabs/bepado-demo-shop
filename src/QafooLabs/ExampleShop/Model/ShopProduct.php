@@ -1,9 +1,9 @@
 <?php
 
-namespace QafooLabs\DummyShop\Model;
+namespace QafooLabs\ExampleShop\Model;
 
 /**
- * Product Model of the DummyShop.
+ * Product Model of the ExampleShop.
  *
  * This model matches the Bepado model almost exactly. This is done
  * for simplicity. There is still a {@link ProductConverter} to show

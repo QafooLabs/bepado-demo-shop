@@ -1,9 +1,9 @@
 <?php
 
-namespace QafooLabs\DummyShop\Controller;
+namespace QafooLabs\ExampleShop\Controller;
 
-use QafooLabs\DummyShop\Model\BasketService;
-use QafooLabs\DummyShop\Bepado\BepadoFactory;
+use QafooLabs\ExampleShop\Model\BasketService;
+use QafooLabs\ExampleShop\Bepado\BepadoFactory;
 use Twig_Environment;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

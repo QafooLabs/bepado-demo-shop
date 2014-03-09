@@ -9,17 +9,17 @@ use Symfony\Component\HttpKernel;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Route;
-use QafooLabs\DummyShop;
+use QafooLabs\ExampleShop;
 
-$bepadoFactory = new DummyShop\Bepado\BepadoFactory(
+$bepadoFactory = new ExampleShop\Bepado\BepadoFactory(
     json_decode(file_get_contents(__DIR__ . '/../shops.json'), true)
 );
 
 $loader = new Twig_Loader_Filesystem(__DIR__ . '/../templates');
 $twig = new Twig_Environment($loader, array());
 
-$shopController = new DummyShop\Controller\ShopController($bepadoFactory, $twig);
-$sdkController = new DummyShop\Controller\SdkController($bepadoFactory);
+$shopController = new ExampleShop\Controller\ShopController($bepadoFactory, $twig);
+$sdkController = new ExampleShop\Controller\SdkController($bepadoFactory);
 
 $routes = new RouteCollection();
 $routes->add('catalog', new Route('/{shop}', array(
@@ -47,12 +47,12 @@ $resolver = new HttpKernel\Controller\ControllerResolver();
 $dispatcher = new EventDispatcher();
 $dispatcher->addSubscriber(new HttpKernel\EventListener\RouterListener($matcher));
 
-$errorHandler = array(new DummyShop\Controller\ErrorController, 'exceptionAction');
+$errorHandler = array(new ExampleShop\Controller\ErrorController, 'exceptionAction');
 $dispatcher->addSubscriber(new HttpKernel\EventListener\ExceptionListener($errorHandler));
 $dispatcher->addSubscriber(new HttpKernel\EventListener\ResponseListener('UTF-8'));
-$dispatcher->addSubscriber(new DummyShop\EventListener\SymfonySessionListener());
+$dispatcher->addSubscriber(new ExampleShop\EventListener\SymfonySessionListener());
 
-$framework = new DummyShop\Framework($dispatcher, $resolver);
+$framework = new ExampleShop\Framework($dispatcher, $resolver);
 
 $request = Request::createFromGlobals();
 $response = $framework->handle($request);

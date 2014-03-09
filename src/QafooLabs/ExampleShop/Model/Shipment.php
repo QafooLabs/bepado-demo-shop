@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\DummyShop\Model;
+namespace QafooLabs\ExampleShop\Model;
 
 class Shipment extends Model
 {

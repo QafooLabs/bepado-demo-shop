@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\DummyShop\EventListener;
+namespace QafooLabs\ExampleShop\EventListener;
 
 use Symfony\Component\HttpKernel\EventListener\SessionListener;
 use Symfony\Component\HttpFoundation\Session\Session;

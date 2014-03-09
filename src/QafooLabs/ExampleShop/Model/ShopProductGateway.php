@@ -1,13 +1,13 @@
 <?php
 
-namespace QafooLabs\DummyShop\Model;
+namespace QafooLabs\ExampleShop\Model;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Types\Type;
 
 /**
- * Contains the storage logic for this DummyShop, including logic to handle bepado.
+ * Contains the storage logic for this ExampleShop, including logic to handle bepado.
  *
  * bepado products should be saved in the same datastructure than your normal
  * products.

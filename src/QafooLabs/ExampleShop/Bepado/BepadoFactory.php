@@ -1,9 +1,9 @@
 <?php
 
-namespace QafooLabs\DummyShop\Bepado;
+namespace QafooLabs\ExampleShop\Bepado;
 
-use QafooLabs\DummyShop\Model\ProductConverter;
-use QafooLabs\DummyShop\Model\ShopProductGateway;
+use QafooLabs\ExampleShop\Model\ProductConverter;
+use QafooLabs\ExampleShop\Model\ShopProductGateway;
 use Bepado\SDK\SDKBuilder;
 use Doctrine\DBAL\DriverManager;
 
@@ -80,7 +80,7 @@ class BepadoFactory
             ->configurePDOGateway($conn->getWrappedConnection())
             ->setProductToShop(new SimpleProductToShop($conn, $converter, $gateway))
             ->setProductFromShop(new SimpleProductFromShop($converter, $gateway))
-            ->setPluginSoftwareVersion('QafooLabs DummyShop')
+            ->setPluginSoftwareVersion('QafooLabs ExampleShop')
         ;
 
         $this->sdks[$shop] = $builder->build();
@@ -92,7 +92,7 @@ class BepadoFactory
     }
 
     /**
-     * @return \QafooLabs\DummyShop\Bepado\Faker
+     * @return \QafooLabs\ExampleShop\Bepado\Faker
      */
     public function getFaker($shop)
     {

@@ -1,15 +1,15 @@
 <?php
 
-namespace QafooLabs\DummyShop\Controller;
+namespace QafooLabs\ExampleShop\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use QafooLabs\DummyShop\Bepado\BepadoFactory;
+use QafooLabs\ExampleShop\Bepado\BepadoFactory;
 
 class SdkController
 {
     /**
-     * @var \QafooLabs\DummyShop\Bepado\BepadoFactory
+     * @var \QafooLabs\ExampleShop\Bepado\BepadoFactory
      */
     private $factory;
 

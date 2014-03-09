@@ -1,14 +1,14 @@
 <?php
 
-namespace QafooLabs\DummyShop\Command;
+namespace QafooLabs\ExampleShop\Command;
 
 use Symfony\Component\Console\Helper\Helper;
-use QafooLabs\DummyShop\Bepado\BepadoFactory;
+use QafooLabs\ExampleShop\Bepado\BepadoFactory;
 
 class BepadoHelper extends Helper
 {
     /**
-     * @var \QafooLabs\DummyShop\Bepado\BepadoFactory
+     * @var \QafooLabs\ExampleShop\Bepado\BepadoFactory
      */
     private $factory;
 
@@ -18,7 +18,7 @@ class BepadoHelper extends Helper
     }
 
     /**
-     * @return \QafooLabs\DummyShop\Bepado\BepadoFactory
+     * @return \QafooLabs\ExampleShop\Bepado\BepadoFactory
      */
     public function getBepadoFactory()
     {
