@@ -1,4 +1,7 @@
 {
+    "name": "bepado/sdk-example-shop",
+    "license": "MIT",
+    "description": "Example shop to show implementation of bepado SDK",
     "require": {
         "symfony/http-foundation": "@stable",
         "symfony/routing": "@stable",
