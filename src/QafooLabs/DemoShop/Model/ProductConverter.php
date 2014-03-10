@@ -13,6 +13,13 @@ use Bepado\SDK\Struct\Product;
  */
 class ProductConverter
 {
+    private $baseUrl;
+
+    public function __construct($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
+    }
+
     public function convertToSDK(ShopProduct $shopProduct)
     {
         $data = (array)$shopProduct;
@@ -26,6 +33,12 @@ class ProductConverter
         // Category Mapping between bepado categories and your own is most
         // important. We use the same category data here for simplicty.
         $data['categories'] = array($data['category']);
+
+        // The Local ID
+        $data['sourceId'] = $data['id'];
+
+        // URL to the product used for CloudSearch
+        $data['url'] = $this->baseUrl . '/product/' . $data['id'];
 
         unset(
             $data['category'],

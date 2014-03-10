@@ -4,8 +4,8 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Helper\HelperSet;
-use QafooLabs\DummyShop\Bepado\BepadoFactory;
-use QafooLabs\DummyShop\Command;
+use QafooLabs\DemoShop\Bepado\BepadoFactory;
+use QafooLabs\DemoShop\Command;
 
 $bepadoFactory = new BepadoFactory(
     json_decode(file_get_contents(__DIR__ . '/../../shops.json'), true)
@@ -17,5 +17,6 @@ $helperSet->set(new Command\BepadoHelper($bepadoFactory));
 $application = new Application();
 $application->setHelperSet($helperSet);
 $application->add(new Command\CreateDatabaseCommand());
+$application->add(new Command\CreateProductsCommand());
 $application->add(new Command\FakeProductCommand());
 $application->run();

@@ -13,7 +13,7 @@ class FakeProductCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('shopdummy:fake-product')
+            ->setName('demoshop:fake-product')
             ->setDescription('Fake a test product send from bepado')
             ->addArgument('shop', InputArgument::REQUIRED, 'Shop name to fake a product for.')
         ;

@@ -70,7 +70,7 @@ class BepadoFactory
 
         $conn = $this->getConnection($shop);
 
-        $converter = new ProductConverter();
+        $converter = new ProductConverter($this->config['dummy']['host'] . "/" . $shop);
         $gateway = new ShopProductGateway($conn);
 
         $builder = new \Bepado\SDK\SDKBuilder();

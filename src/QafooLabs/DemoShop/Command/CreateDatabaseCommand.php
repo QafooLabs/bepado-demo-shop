@@ -15,7 +15,7 @@ class CreateDatabaseCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('shopdummy:create-database')
+            ->setName('demoshop:create-database')
             ->setDescription('Create all databases')
         ;
     }

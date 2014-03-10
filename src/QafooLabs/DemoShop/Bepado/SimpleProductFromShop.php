@@ -36,7 +36,7 @@ class SimpleProductFromShop implements ProductFromShop
      */
     public function getProducts(array $ids)
     {
-        $shopProducts = $this->converter->findProductsById($ids);
+        $shopProducts = $this->gateway->findProductsById($ids);
         $sdkProducts = array();
 
         foreach ($shopProducts as $shopProduct) {

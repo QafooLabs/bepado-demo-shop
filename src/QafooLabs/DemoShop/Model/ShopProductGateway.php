@@ -166,7 +166,7 @@ class ShopProductGateway
     public function exportShopProductToBepado($productId)
     {
         // You have to prevent that a bepado product is exported as your own product to bepado again.
-        if ($this->isBepadoProduct()) {
+        if ($this->isBepadoProduct($productId)) {
             throw new \RuntimeException("You have to prevent that a bepado product is exported as your own product to bepado again.");
         }
 
