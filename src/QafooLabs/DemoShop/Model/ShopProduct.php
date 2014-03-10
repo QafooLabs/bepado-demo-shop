@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Model;
+namespace QafooLabs\DemoShop\Model;
 
 /**
  * Product Model of the ExampleShop.

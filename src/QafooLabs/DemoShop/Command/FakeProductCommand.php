@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Command;
+namespace QafooLabs\DemoShop\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

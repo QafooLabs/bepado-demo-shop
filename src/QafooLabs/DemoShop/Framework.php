@@ -1,5 +1,5 @@
 <?php
-namespace QafooLabs\ExampleShop;
+namespace QafooLabs\DemoShop;
 
 use Symfony\Component\HttpKernel\HttpKernel;
 

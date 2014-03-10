@@ -1,9 +1,9 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Bepado;
+namespace QafooLabs\DemoShop\Bepado;
 
-use QafooLabs\ExampleShop\Model\ProductConverter;
-use QafooLabs\ExampleShop\Model\ShopProductGateway;
+use QafooLabs\DemoShop\Model\ProductConverter;
+use QafooLabs\DemoShop\Model\ShopProductGateway;
 use Bepado\SDK\SDKBuilder;
 use Doctrine\DBAL\DriverManager;
 
@@ -92,7 +92,7 @@ class BepadoFactory
     }
 
     /**
-     * @return \QafooLabs\ExampleShop\Bepado\Faker
+     * @return \QafooLabs\DemoShop\Bepado\Faker
      */
     public function getFaker($shop)
     {

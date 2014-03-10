@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Model;
+namespace QafooLabs\DemoShop\Model;
 
 abstract class Model
 {

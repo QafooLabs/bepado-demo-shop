@@ -1,9 +1,9 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Bepado;
+namespace QafooLabs\DemoShop\Bepado;
 
-use QafooLabs\ExampleShop\Model\ProductConverter;
-use QafooLabs\ExampleShop\Model\ShopProductGateway;
+use QafooLabs\DemoShop\Model\ProductConverter;
+use QafooLabs\DemoShop\Model\ShopProductGateway;
 use Bepado\SDK\ProductToShop;
 use Bepado\SDK\Struct;
 
@@ -17,12 +17,12 @@ class SimpleProductToShop implements ProductToShop
     private $conn;
 
     /**
-     * @var \QafooLabs\ExampleShop\Bepado\Model\ProductConverter
+     * @var \QafooLabs\DemoShop\Bepado\Model\ProductConverter
      */
     private $converter;
 
     /**
-     * @var \QafooLabs\ExampleShop\Bepado\Model\ShopProductGateway
+     * @var \QafooLabs\DemoShop\Bepado\Model\ShopProductGateway
      */
     private $gateway;
 

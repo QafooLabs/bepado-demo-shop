@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Model;
+namespace QafooLabs\DemoShop\Model;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\Schema;

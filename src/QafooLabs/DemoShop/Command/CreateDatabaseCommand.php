@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Command;
+namespace QafooLabs\DemoShop\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use QafooLabs\ExampleShop\Model\ShopProductGateway;
+use QafooLabs\DemoShop\Model\ShopProductGateway;
 
 class CreateDatabaseCommand extends Command
 {

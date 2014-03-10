@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Model;
+namespace QafooLabs\DemoShop\Model;
 
 use DateTime;
 use Bepado\SDK\Struct\Product;

@@ -1,6 +1,6 @@
 <?php
 
-namespace QafooLabs\ExampleShop\Model;
+namespace QafooLabs\DemoShop\Model;
 
 class Address extends Model
 {
