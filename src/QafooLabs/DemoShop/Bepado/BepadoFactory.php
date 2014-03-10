@@ -80,7 +80,7 @@ class BepadoFactory
             ->configurePDOGateway($conn->getWrappedConnection())
             ->setProductToShop(new SimpleProductToShop($conn, $converter, $gateway))
             ->setProductFromShop(new SimpleProductFromShop($converter, $gateway))
-            ->setPluginSoftwareVersion('QafooLabs ExampleShop')
+            ->setPluginSoftwareVersion('QafooLabs DemoShop')
         ;
 
         $this->sdks[$shop] = $builder->build();
