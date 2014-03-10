@@ -5,6 +5,10 @@
 
 <form method="POST" action="/{{ shop }}/checkout" role="form">
 
+{% if basket.isShippable == false %}
+    <div class="alert alert-warning">Some shipments cannot be sent to your country.</div>
+{% endif %}
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -126,7 +130,7 @@
 </div>
 
 <p align="center">
-    <input type="submit" class="btn btn-primary" value="Checkout" />
+    <input type="submit" class="btn btn-primary" value="Checkout" {% if basket.isShippable == false %}disabled="disabled"{% endif %} />
 </p>
 
 </form>

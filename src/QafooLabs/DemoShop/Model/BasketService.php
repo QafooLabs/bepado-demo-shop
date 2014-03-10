@@ -234,6 +234,7 @@ class BasketService
             // local shipping costs are not our business here..
             'grossShippingCosts' => 3.99,
             'netShippingCosts' => 3.99 / 1.19,
+            'isShippable' => true,
         ));
 
         foreach ($basketLocalProducts as $product) {

@@ -31,10 +31,12 @@ data. You need to get in contact with `bepado@shopware.com` to receive an
 account and api key on the Test system.
 
 Create a database ``bepado_dummyshop_$shop`` where $shop is the key in the shops
-array of your ``shops.json``. Call ``php src/bin/dummyshop dummyshop:create-database``
+array of your ``shops.json``. Call ``php src/bin/demoshop demoshop:create-database``
 to create the schema for the database.
 
-To receive some dummy data from a remote shop, call ``php src/bin/dummyshop dummyshop:fake-product``.
+To receive some dummy data from a remote shop, call ``php src/bin/demoshop demoshop:fake-product``.
+
+To create some local shop data call ``php src/bin/demoshop demoshop:create-products``.
 
 You can use the builtin server to run the shop:
 
