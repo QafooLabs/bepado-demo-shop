@@ -1,6 +1,6 @@
-# Bepado SDK Example Shop
+# Bepado SDK Demo Shop
 
-This repository contains an example shop with bepado SDK API implemented. It
+This repository contains a demo shop with bepado SDK API implemented. It
 is integrated into a very simple shop system built with Symfony components.
 
 ## Where to look?
@@ -24,7 +24,7 @@ is integrated into a very simple shop system built with Symfony components.
 
 You can install this project via Composer:
 
-    composer create-project bepado/sdk-example-shop
+    composer create-project qafoolabs/bepado-demo-shop
 
 Then you need to copy the "shops.dist.json" to "shops.json" and adjust the
 data. You need to get in contact with `bepado@shopware.com` to receive an

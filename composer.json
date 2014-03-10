@@ -1,5 +1,5 @@
 {
-    "name": "bepado/sdk-example-shop",
+    "name": "qafoolabs/bepado-demo-shop",
     "license": "MIT",
     "description": "Example shop to show implementation of bepado SDK",
     "require": {
