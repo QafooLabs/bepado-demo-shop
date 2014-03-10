@@ -95,7 +95,7 @@ class BasketService
         // This can theoretically fail, you could use transactions to be able to rollback,
         // or do the checkout() call before saving your local order.
         if ($reservation) { // check if remote products included
-            $ret = $this->sdk->checkout($reservation);
+            $ret = $this->sdk->checkout($reservation, $order->id);
         }
 
         return $order;
