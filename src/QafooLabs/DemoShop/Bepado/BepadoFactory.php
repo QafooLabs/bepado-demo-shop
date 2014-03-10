@@ -46,7 +46,7 @@ class BepadoFactory
 
         $params = $this->config['mysql'];
         $params['driver'] = 'pdo_mysql';
-        $params['dbname'] = 'bepado_shopdummy_' . $shop;
+        $params['dbname'] = 'bepado_shopdemo_' . $shop;
 
         return $this->conns[$shop] = DriverManager::getConnection($params);
     }

@@ -30,7 +30,7 @@ Then you need to copy the "shops.dist.json" to "shops.json" and adjust the
 data. You need to get in contact with `bepado@shopware.com` to receive an
 account and api key on the Test system.
 
-Create a database ``bepado_dummyshop_$shop`` where $shop is the key in the shops
+Create a database ``bepado_shopdemo_$shop`` where $shop is the key in the shops
 array of your ``shops.json``. Call ``php src/bin/demoshop demoshop:create-database``
 to create the schema for the database.
 
