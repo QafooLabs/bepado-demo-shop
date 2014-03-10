@@ -6,19 +6,22 @@ is integrated into a very simple shop system built with Symfony components.
 ## Where to look?
 
 1. Take a look at the
-   ``src/QafooLabs/DummyShop/Bepado/SimpleProductFromShop.php`` and
+   ``src/QafooLabs/DemoShop/Bepado/SimpleProductFromShop.php`` and
    ``SimpleProductToShop.php`` files.  For an implementation of the two bepado
    SDK interfaces that you have to do in your own plugin.
-2. The folder ``src/QafooLabs/DummyShop/Model`` contains models and services
+2. The folder ``src/QafooLabs/DemoShop/Model`` contains models and services
    related to the shop system.  You will need to take a look at the
    ``BasketService.php``, ``ProductConverter.php`` and
    ``ShopProductGateway.php``.  They contain a lot of the logic and storage
    related code that is necessary to work with the bepado SDK.
-3. The controller ``src/QafooLabs/DummyShop/Controller/SdkController.php`` is
+3. The controller ``src/QafooLabs/DemoShop/Controller/SdkController.php`` is
    an example of how to setup the SDK RPC endpoint.
-4. The controller ``src/QafooLabs/DummyShop/Controller/ShopController.php``
+4. The controller ``src/QafooLabs/DemoShop/Controller/ShopController.php``
    contains the category listing, basket listing and checkout with calls to the
    relevant services invoking bepado SDK code.
+5. The command ``src/QafooLabs/DemoShopy/Command/CreateProductsCommand.php`` contains
+   some random product generation code, but also uses the bepado SDK to record
+   exports of products to bepado.
 
 ## Installation
 
