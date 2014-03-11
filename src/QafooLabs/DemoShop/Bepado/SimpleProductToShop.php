@@ -43,9 +43,17 @@ class SimpleProductToShop implements ProductToShop
      */
     public function insertOrUpdate(Struct\Product $product)
     {
-        $productId = $this->gateway->store(
-            $this->converter->convertToShop($product)
+        $localProductId = $this->gateway->getBepadoShopProductId(
+            $product->shopId, $product->sourceId
         );
+
+        $shopProduct = $this->converter->convertToShop($product);
+
+        if ($localProductId) {
+            $shopProduct->id = $localProductId;
+        }
+
+        $productId = $this->gateway->store($shopProduct);
 
         $this->gateway->storeBepadoAttributes($productId, $product->shopId, $product->sourceId);
     }

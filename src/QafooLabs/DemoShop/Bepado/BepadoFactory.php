@@ -20,9 +20,9 @@ class BepadoFactory
 
     private function initEnvironment()
     {
-        putenv("_SOCIALNETWORK_HOST=sn." . $this->config['bepado']['host']);
-        putenv("_TRANSACTION_HOST=transaction." . $this->config['bepado']['host']);
-        putenv("_SEARCH_HOST=search." . $this->config['bepado']['host']);
+        putenv("_SOCIALNETWORK_HOST=" . $this->config['bepado']['host']);
+        putenv("_TRANSACTION_HOST=" . $this->config['bepado']['host']);
+        putenv("_SEARCH_HOST=" . $this->config['bepado']['host']);
     }
 
     /**
