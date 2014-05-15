@@ -85,5 +85,12 @@ class SimpleProductFromShop implements ProductFromShop
      */
     public function buy(Struct\Order $order)
     {
+        // save the order in your shopsystem, then return your shops order id
+        // you need to convert the Bepado ORrder to an order in your shop system.
+        // Example:
+        $orderData = $this->convertBepadoToMyShop($order);
+        
+        MyShop::store($orderData);
+        return $myOrderId;
     }
 }
